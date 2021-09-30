@@ -14,11 +14,11 @@ spec:
     spec:
       containers:
         - name: movies
-          image: acslook/rotten-potatoes
+          image: claudi0s0uza/rotten-potatoes
           ports:
             - containerPort: 5000
           env:
-            - name: MONGO_DB
+            - name: MONGODB_DB
               value: admin
             - name: MONGODB_HOST
               value: mongo-service
