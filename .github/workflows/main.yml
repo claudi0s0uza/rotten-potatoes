@@ -28,8 +28,8 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            claudi0s0uza/rotten-potatoes:latest
-            claudi0s0uza/rotten-potatoes:${{ github.run_number }} 
+            claudio0019/rotten-potatoes:latest
+            claudio0019/rotten-potatoes:${{ github.run_number }} 
   CD:
     needs: [CI]
     runs-on: ubuntu-latest
@@ -46,7 +46,7 @@ jobs:
       - name: Deploy to Kubernetes cluster
         uses: Azure/k8s-deploy@v1.3
         with: 
-          images: claudi0s0uza/rotten-potatoes:${{ github.run_number }} 
+          images: claudio0019/rotten-potatoes:${{ github.run_number }} 
           manifests: |
             k8s/mongodb/deployment.yaml
             k8s/web/deployment.yaml
