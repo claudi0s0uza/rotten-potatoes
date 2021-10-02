@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: pipoca
 spec:
- replicas: 3      
- selector:
+  replicas: 3      
+  selector:
     matchLabels:
       app: movies
   template:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: movies
-          image: claudi0s0uza/rotten-potatoes
+          image: claudio0019/rotten-potatoes
           ports:
             - containerPort: 5000
           env:
