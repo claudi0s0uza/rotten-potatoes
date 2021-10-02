@@ -35,9 +35,9 @@ spec:
       targetPort: 27017
   type: ClusterIP
   
-  ---
+---
   
-  apiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cinema10
