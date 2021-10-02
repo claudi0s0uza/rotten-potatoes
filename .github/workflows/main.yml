@@ -48,5 +48,4 @@ jobs:
         with: 
           images: claudio0019/rotten-potatoes:${{ github.run_number }} 
           manifests: |
-              k8s/mongodb/deployment.yaml
-              k8s/web/deployment.yaml
+              k8s/deployment.yaml
